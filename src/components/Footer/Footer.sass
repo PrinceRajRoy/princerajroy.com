@@ -1,0 +1,39 @@
+$layout-breakpoint-sm: 600px
+$layout-breakpoint-md: 800px
+
+.Footer
+    background: var(--blue3)
+    color: var(--white)
+    height: max-content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    font-size: 0.8rem
+    & > div
+        display: flex
+        flex-direction: row
+    &__text
+        position: relative
+    &__section .Footer__text:not(:last-child)::after
+        content: '|'
+        position: absolute
+        right: 0
+
+@media only screen and (min-width: $layout-breakpoint-sm)
+    .Footer
+        height: 80px
+        font-size: 1rem
+        &__text
+            padding: 0 20px
+            position: relative
+        &__section .Footer__text:not(:last-child)::after
+            content: '|'
+            position: absolute
+            right: 0
+        &__text
+            padding: 0 20px
+
+@media only screen and (min-width: $layout-breakpoint-md)
+    .Footer
+        font-size: 1.2rem

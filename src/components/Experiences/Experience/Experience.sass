@@ -1,0 +1,29 @@
+$layout-breakpoint-xs: 400px
+$layout-breakpoint-sm: 600px
+
+.Experience
+    width: 45%
+    height: 80%
+    padding: 0 10px
+    color: var(--white)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: auto
+    border-radius: 30px
+    background: var(--blue2)
+    &__where
+        margin: unset
+
+@media only screen and (max-width: $layout-breakpoint-sm)
+    .Experience
+        display: block
+        padding: 10px
+        width: 80%
+        margin: 20px auto
+        
+
+@media only screen and (max-width: $layout-breakpoint-xs)
+    .Experience
+        width: 90%
+        margin: 10px auto

@@ -1,0 +1,9 @@
+@media only screen and (min-width: 600px) {
+    .circles1 {
+        grid-area: 1 / 2;
+    }
+    
+    .circles2 {
+        grid-area: 2 / 2;
+    }
+}
