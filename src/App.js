@@ -34,8 +34,7 @@ function App() {
     titles.forEach((el) => {
       gsap.from(el, {
         scrollTrigger: {
-          trigger: el,
-          start: "top bottom"
+          trigger: el
         },
         transform: "scaleX(0)",
         opacity: 0,
@@ -43,20 +42,6 @@ function App() {
         ease: Power2.easeInOut
       })
     })
-    // const navActive = gsap.utils.toArray(".Nav__active")
-    // const navItems = gsap.utils.toArray(".Nav__items > li:nth-child(n + 1)")
-    // containers.forEach((el, index) => {
-    //     gsap.from(navActive, {
-    //       scrollTrigger: {
-    //         trigger: el,
-    //         start: "top bottom"
-    //       },
-    //       yoyo: false,
-    //       left: navItems[index + 1].offsetLeft,
-    //       duration: 1.2,
-    //       ease: Power2.easeInOut
-    //   })
-    // })
 
   }, [])
 

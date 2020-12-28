@@ -8,6 +8,7 @@ import P3 from '../../utilities/images/P3.PNG'
 import P4 from '../../utilities/images/P4.png'
 import P5 from '../../utilities/images/P5.PNG'
 import P6 from '../../utilities/images/P6.PNG'
+import gsap from 'gsap'
 
 function Projects() {
 
