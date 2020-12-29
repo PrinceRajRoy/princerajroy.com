@@ -2,6 +2,7 @@ $layout-breakpoint-xs: 400px
 $layout-breakpoint-sm: 600px
 $layout-breakpoint-md: 800px
 $layout-breakpoint-lg: 1000px
+$layout-breakpoint-xl: 1200px
 
 .Projects
     position: relative
@@ -109,6 +110,10 @@ $layout-breakpoint-lg: 1000px
             > span
                 border-width: 2px
 
+@media only screen and (max-width: $layout-breakpoint-xl)
+    .Projects
+        width: 100%
+
 @media only screen and (max-width: $layout-breakpoint-md)
     .Projects
         width: 100%
@@ -119,8 +124,7 @@ $layout-breakpoint-lg: 1000px
                 transform: scale(0.8)
         &__nav
             transform: scale(0.8)
-            margin-top: -69px
-
+            margin-top: -50px
 
 @media only screen and (max-width: $layout-breakpoint-sm)
     .Projects

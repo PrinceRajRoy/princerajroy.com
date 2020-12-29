@@ -8,7 +8,6 @@ import P3 from '../../utilities/images/P3.PNG'
 import P4 from '../../utilities/images/P4.png'
 import P5 from '../../utilities/images/P5.PNG'
 import P6 from '../../utilities/images/P6.PNG'
-import gsap from 'gsap'
 
 function Projects() {
 
@@ -66,7 +65,7 @@ function Projects() {
         var container = document.getElementsByClassName("Projects__items")[0]
         if(window.screen.width < 600) {
             var item = document.getElementsByClassName("Projects__items")[0].children[0]
-            container.scrollLeft += item.scrollWidth
+            container.scrollLeft = container.scrollLeft + item.offsetWidth
         }
         setChilds(container.childElementCount)
     }, [childs])
@@ -75,7 +74,7 @@ function Projects() {
         <div className="Projects">
             <div className="titleHolderProjects titleHolder">
                 <div className="line left"></div>
-                <span>PROJECTS</span>
+                <span>FEATURED PROJECTS</span>
                 <div className="line right"></div>
             </div>
             <div className="Projects__items">
@@ -85,7 +84,7 @@ function Projects() {
                     title="Netflix Clone" 
                     image={P1} 
                     desc="A ReactJS App that uses the popular 'The Movie Database' (TMDb) API's which provides the ongoing popular TV Series and Movies listing and presents to the user in the same visual way as Netflix."
-                    link="https://www.reddit.com/r/cyberpunkgame" />
+                    link="https://github.com/PrinceRajRoy/Netflix-Clone-App" />
                 <Project 
                     active={current === 1}
                     title="Astoogle" 

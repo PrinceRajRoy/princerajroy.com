@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { animated, useSpring } from 'react-spring'
 import './Skill.sass'
 
-function Skill({ icon, desc }) {
+function Skill({ icon, title, desc, subtitle, subdesc }) {
 
     const [hover, setHover] = useState(false)
 
@@ -22,7 +22,10 @@ function Skill({ icon, desc }) {
             onMouseOut={() => setHover(false)}>
                 <img className="Skill__icon" src={icon} alt="Skill-icon"/>
                 <div className="Skill__desc">
-                    {desc}
+                    <h3 className="Skill__title">{title}</h3>
+                    <div className="Skill__desc1">{desc}</div>
+                    <h4 className="Skill__subtitle">{subtitle}</h4>
+                    <div className="Skill__desc2">{subdesc}</div>
                 </div>
         </animated.div>
     )

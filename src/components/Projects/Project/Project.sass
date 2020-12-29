@@ -2,7 +2,7 @@
     height: 384px
     width: 224px
     padding: 8px
-    margin: 0 auto
+    margin: 20px auto 10px
     border-radius: 24px
     background: var(--white)
     box-shadow: 0px 0px 50px -25px var(--blue5)
@@ -35,14 +35,19 @@
         left: 50%
         bottom: 10px
         transform: translateX(-50%)
+        pointer-events: auto
     &__active
         transform: scale(1.2) !important
-        height: 420px
+        height: 430px
         & .Project__link
             display: initial
 
 @media only screen and ( max-width:  800px)
     .Project__active
-        transform: scale(1) !important
+        transform: scale(1.1) !important
+
+@media only screen and ( max-width: 600px)
+    .Project
+        box-shadow: 0px 0px 60px -25px var(--blue5)
     
         

@@ -29,7 +29,7 @@ function Connect() {
     }
 
     return (
-        <ul className={`Connect `}>
+        <ul className="Connect">
             <li>
                 <a href="https://www.facebook.com/princeraj.roy/" target="_blank" rel="noopener noreferrer">
                     <img src={FB} alt="Facebook"/>

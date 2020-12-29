@@ -1,9 +1,9 @@
 import Skill from './Skill/Skill'
 import './Skills.sass'
 import HTML from '../../utilities/images/HTML.svg'
+import NODE from '../../utilities/images/NODE.svg'
 import FIGMA from '../../utilities/images/FIGMA.svg'
-import JAVASCRIPT from '../../utilities/images/JAVASCRIPT.svg'
-import CSS from '../../utilities/images/CSS.svg'
+import BLENDER from '../../utilities/images/BLENDER.svg'
 
 function Skills() {
     return (
@@ -14,10 +14,10 @@ function Skills() {
                 <div className="line right"></div>
             </div>
             <div className="Skills__bg">
-                <Skill icon={HTML} desc="Front-End Development - HTML, CSS, JS <br /> Frameworks - ReactJS, Bootstrap, React-Spring"/>
-                <Skill icon={FIGMA} desc="Front-End Development - HTML, CSS, JS <br /> Frameworks - ReactJS, Bootstrap, React-Spring"/>
-                <Skill icon={JAVASCRIPT} desc="Front-End Development - HTML, CSS, JS <br /> Frameworks - ReactJS, Bootstrap, React-Spring"/>
-                <Skill icon={CSS} desc="Front-End Development - HTML, CSS, JS <br /> Frameworks - ReactJS, Bootstrap, React-Spring"/>
+                <Skill icon={HTML} title={"Front-End Development"} desc="HTML, CSS, JS" subtitle="Frameworks" subdesc="ReactJS, Bootstrap, React-Spring, GSAP"/>
+                <Skill icon={NODE} title={"Back-End Development"} desc="NodeJS, KnexJS" subtitle="Frameworks" subdesc="HapiJS, ExpressJS"/>
+                <Skill icon={FIGMA} title={"Softwares"} desc="FIGMA, VSCODE, Anaconda apps" subtitle="Frameworks" subdesc="ReactJS, Bootstrap, React-Spring"/>
+                <Skill icon={BLENDER} title={"Meta"} desc="Blender, Inkscape, VSDC"/>
             </div>
         </div>
     )
