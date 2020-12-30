@@ -1,7 +1,6 @@
 import gsap, { Power1 } from 'gsap';
 import { Power4 } from 'gsap/gsap-core';
 import React, { useEffect } from 'react'
-import Profile from '../../utilities/images/Profile.png';
 import './Hero.sass'
 
 function Hero() {
@@ -58,7 +57,7 @@ function Hero() {
                 <div className="Hero__scroll">
                     <div></div>
                 </div>
-                <img className="Hero__profile" src={Profile} alt="Profile"/>
+                <img className="Hero__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
             </div>
             {/* <div className="Hero__scroll"></div> */}
         </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Nav.sass';
-import Profile from '../../utilities/images/Profile.png';
 import Connect from '../Connect/Connect';
 import { useSpring, animated, config } from 'react-spring';
 import gsap from 'gsap'
@@ -52,7 +51,7 @@ function Nav() {
                 <div className="ham__item"></div>
             </label>
             <nav className="Nav__container">
-                <img className="Nav__profile" src={Profile} alt="Profile"/>
+                <img className="Nav__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
                 <span className="Nav__name" onClick={() => window.scrollTo(0, 0)}>Prince Raj Roy</span>
                 <ul className="Nav__items">
                     <animated.li className="Nav__active" style={props}/>
