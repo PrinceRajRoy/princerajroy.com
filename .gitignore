@@ -6,6 +6,8 @@
 .pnp.js
 .eslintcache
 debug.log
+.firebaserc
+firebase.json
 
 # testing
 /coverage
