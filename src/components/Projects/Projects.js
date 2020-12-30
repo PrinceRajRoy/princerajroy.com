@@ -90,31 +90,31 @@ function Projects() {
                     title="Astoogle" 
                     image={P2}
                     desc="Made using ReactJS, and app that fetches Near Earth Objects API data from NASA APIs and presents it to the user."
-                    link="https://www.reddit.com/r/cyberpunkgame" />
+                    link="hhttps://github.com/PrinceRajRoy/Astoogle" />
                 <Project 
                     active={current === 2}
                     title="Spotify Web Clone" 
                     image={P3} 
                     desc="ReactJS App that uses the popular official Spotify API's which provides the all the Spotify user data, given the user must have Premium Spotify Account. The data is presented using React Context API."
-                    link="https://www.reddit.com/r/cyberpunkgame" />
+                    link="https://github.com/PrinceRajRoy/Spotify-Clone-App" />
                 <Project 
                     active={current === 3}
                     title="Library Management System" 
                     image={P4}
                     desc="Made using ReactJS + NodeJS App for library book management which allows issuing, returning and viewing options of current books in the library."
-                    link="https://www.reddit.com/r/cyberpunkgame" />
+                    link="https://github.com/PrinceRajRoy/Library-Management-System" />
                 <Project 
                     active={current === 4}
                     title="Text Chat App" 
                     image={P5} 
                     desc="Based on ReactJS + NodeJS + Socket.io, an app for texting, which allows user to join a room with given id and talk with others in the same room."
-                    link="https://www.reddit.com/r/cyberpunkgame" />
+                    link="https://github.com/PrinceRajRoy/ChatApp" />
                 <Project 
                     active={current === 5}
                     title="Video Call App" 
                     image={P6} 
                     desc="Based on WebRTC - Peer, ReactJS & NodeJS App for Video calling, which allows user to join a room with given id for conference video call with others."
-                    link="https://www.reddit.com/r/cyberpunkgame" />
+                    link="https://github.com/PrinceRajRoy/VideoCallApp" />
                 <div className="Projects__placeholder"></div>
             </div>
             <div className="Projects__nav">

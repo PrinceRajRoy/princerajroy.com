@@ -5,7 +5,7 @@ import { animated, config, useSpring } from 'react-spring'
 
 function Hire() {
 
-    const [status, setStatus] = useState('Message Emailed Successfully!')
+    const [status, setStatus] = useState('Message Sent Successfully!')
     const [alert, setAlert] = useState(false)
 
     const props = useSpring({
@@ -22,7 +22,7 @@ function Hire() {
         const userId = process.env.REACT_APP_USER_ID
         emailjs.sendForm(serviceId, templateId, e.target, userId)
             .then((res) => {
-                setStatus("Message Emailed Successfully!")
+                setStatus("Message Sent Successfully!")
                 setAlert(true)
                 setTimeout(() => setAlert(false), 5000)
             }).catch((err) => {
