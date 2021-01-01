@@ -24,19 +24,19 @@ function Hire() {
             .then((res) => {
                 setStatus("Message Sent Successfully!")
                 setAlert(true)
+                e.target.reset()
                 setTimeout(() => setAlert(false), 5000)
             }).catch((err) => {
                 setStatus(err)
                 setStatus("Unsuccessfully, Try Again!")
             })
-        e.target.reset()
     }
 
     return (
         <form className="Hire" onSubmit={handleSubmit}>
             <div className="Hire__title">Hire Me</div>
             <label htmlFor="name" className="Hire__label">Name *</label>
-            <input id="name" name="name" type="text" className="Hire__input"/>
+            <input id="name" name="name" type="text" className="Hire__input" required/>
             <label htmlFor="email" className="Hire__label">Email *</label>
             <input id="email" name="email" type="email" className="Hire__input" required/>
             <label htmlFor="message" className="Hire__label">Message *</label>

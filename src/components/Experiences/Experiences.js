@@ -7,7 +7,7 @@ function Experiences() {
         <div className="Experiences">
             <div className="titleHolderExperiences titleHolder">
                 <div className="line left"></div>
-                <span>EXPERIENCES</span>
+                <span>Experiences</span>
                 <div className="line right"></div>
             </div>
             <div className="Experiences__bg">

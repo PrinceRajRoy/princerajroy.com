@@ -4,21 +4,16 @@ $layout-breakpoint-md: 800px
 .Footer
     background: var(--blue3)
     color: var(--white)
-    height: max-content
+    height: 80px
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
-    font-size: 0.8rem
     & > div
         display: flex
         flex-direction: row
     &__text
         position: relative
-    &__section .Footer__text:not(:last-child)::after
-        content: '|'
-        position: absolute
-        right: 0
 
 @media only screen and (min-width: $layout-breakpoint-sm)
     .Footer
@@ -31,8 +26,17 @@ $layout-breakpoint-md: 800px
             content: '|'
             position: absolute
             right: 0
+
+@media only screen and (max-width: $layout-breakpoint-sm)
+    .Footer
+        height: 80px
+        font-size: 1rem
+        flex-direction: row
+        font-size: 0.8rem
         &__text
-            padding: 0 20px
+            padding: 0 10px
+        & > div
+            flex-direction: column
 
 @media only screen and (min-width: $layout-breakpoint-md)
     .Footer

@@ -43,7 +43,7 @@ function Education() {
             <div className="titleHolderEducation titleHolder">
                 <span className="titleHolderEducation__title">
                     <div className="line left"></div>
-                        <span>EDUCATION</span>
+                        <span>Education</span>
                     <div className="line right"></div>
                 </span>
             </div>

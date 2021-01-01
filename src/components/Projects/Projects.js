@@ -74,7 +74,7 @@ function Projects() {
         <div className="Projects">
             <div className="titleHolderProjects titleHolder">
                 <div className="line left"></div>
-                <span>FEATURED PROJECTS</span>
+                <span>Featured Projects</span>
                 <div className="line right"></div>
             </div>
             <div className="Projects__items">
@@ -90,7 +90,7 @@ function Projects() {
                     title="Astoogle" 
                     image={P2}
                     desc="Made using ReactJS, and app that fetches Near Earth Objects API data from NASA APIs and presents it to the user."
-                    link="hhttps://github.com/PrinceRajRoy/Astoogle" />
+                    link="https://github.com/PrinceRajRoy/Astoogle" />
                 <Project 
                     active={current === 2}
                     title="Spotify Web Clone" 
