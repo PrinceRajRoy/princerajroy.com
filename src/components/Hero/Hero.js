@@ -45,8 +45,8 @@ function Hero() {
             <div className="Hero__container">
                 <div className="Hero__title">Hey! I'm Prince</div>
                 <div className="Hero__about">
-                    I’m a web developer with almost 4 years of experience.
-                    I try to build quality through skill and design
+                    I'm a Assam (India) based self-taught web developer (mainly frontend).
+                    I love crafting clean user friendly web experience and I'm passionate about learning new stuff and make awesome web apps to improve lives of people around me.
                 </div>
                 <div className="Hero__buttons">
                     <a href="https://drive.google.com/open?id=1xLHIvxIGpB37G-Ks49nTtC5wVOMxJ4AE" target="_blank" rel="noopener noreferrer">
