@@ -63,9 +63,8 @@ ul {
   content: '';
   opacity: 1;
   height: 4px;
-  width: 8vw;
-  display: inline-block;
-  margin: 0 10px;
+  width: 200px;
+  margin: 0 auto;
   vertical-align: middle;
   background: var(--blue3);
 }
