@@ -43,7 +43,7 @@ function Hero() {
     return (
         <div className="Hero">
             <div className="Hero__container">
-                <div className="Hero__title">Hey! I'm Prince</div>
+                <div className="Hero__title">Hey! I'm Prince </div>
                 <div className="Hero__about">
                     I'm a Assam (India) based self-taught web developer (mainly frontend).
                     I love crafting clean user friendly web experience and I'm passionate about learning new stuff and make awesome web apps to improve lives of people around me.
