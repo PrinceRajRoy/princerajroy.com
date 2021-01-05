@@ -33,6 +33,13 @@ function Hero() {
             duration: 0.8,
             yoyo: true
         })
+        gsap.to(".Hero__blink", {
+            opacity: 0,
+            ease: Power4.easeInOut,
+            repeat: -1,
+            duration: 0.6,
+            yoyo: true
+        })
     }, [])
 
     const scrollHire = () => {
@@ -43,10 +50,10 @@ function Hero() {
     return (
         <div className="Hero">
             <div className="Hero__container">
-                <div className="Hero__title">Hey! I'm Prince </div>
+                <div className="Hero__title">&#x3c;Hey! I'm Prince <span className="Hero__blink"></span></div>
                 <div className="Hero__about">
-                    I'm a Assam (India) based self-taught web developer (mainly frontend).
-                    I love crafting clean user friendly web experience and I'm passionate about learning new stuff and make awesome web apps to improve lives of people around me.
+                    A <b>full stack web developer</b> from Assam, India.
+                    I love crafting clean user friendly web experience and make awesome web apps.
                 </div>
                 <div className="Hero__buttons">
                     <a href="https://drive.google.com/open?id=1xLHIvxIGpB37G-Ks49nTtC5wVOMxJ4AE" target="_blank" rel="noopener noreferrer">
@@ -59,7 +66,6 @@ function Hero() {
                 </div>
                 <img className="Hero__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
             </div>
-            {/* <div className="Hero__scroll"></div> */}
         </div>
     )
 }
