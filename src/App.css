@@ -57,25 +57,27 @@ ul {
   font-weight: 700;
   font-size: 1.7rem;
   color: var(--blue3);
+  position: relative;
 }
 
 .line {
   content: '';
-  opacity: 1;
   height: 4px;
   width: 200px;
-  margin: 10px auto;
-  vertical-align: middle;
+  margin: 5px auto;
   background: var(--blue3);
 }
 
-.left {
-  transform-origin: right;
-  display: none;
-}
-
-.right {
-  transform-origin: initial;
+.lCircle {
+  content: '';
+  height: 10px;
+  width: 10px;
+  background: var(--blue3);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 450px) {

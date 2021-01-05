@@ -3,30 +3,34 @@ import FB from '../../utilities/images/fb.svg'
 import GH from '../../utilities/images/github.svg'
 import IG from '../../utilities/images/insta.svg'
 import LI from '../../utilities/images/linkedin.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Connect() {
 
     const [check, setCheck] = useState(true)
     
-    window.onscroll = () => {
+    useEffect(() => {
         var connect = document.getElementsByClassName("Connect")[0]
-        var ham = document.querySelectorAll(".ham__item")
-        if(window.scrollY > window.innerHeight && check) {
-            connect.classList.add("active")
-            ham.forEach(el => {
-                el.setAttribute("style", "background: var(--blue4)")
-            })
-            setCheck(false)
+        const connectB = () => {
+            var ham = document.querySelectorAll(".ham__item")
+            if(window.scrollY > window.innerHeight && check) {
+                connect.classList.add("active")
+                ham.forEach(el => {
+                    el.setAttribute("style", "background: var(--blue4)")
+                })
+                setCheck(false)
+            }
+            else if(window.scrollY <= window.innerHeight) {
+                connect.classList.remove("active")
+                ham.forEach(el => {
+                    el.setAttribute("style", "background: var(--blue0)")
+                })
+                setCheck(true)
+            }
         }
-        else if(window.scrollY <= window.innerHeight) {
-            connect.classList.remove("active")
-            ham.forEach(el => {
-                el.setAttribute("style", "background: var(--blue0)")
-            })
-            setCheck(true)
-        }
-    }
+        window.addEventListener("scroll", connectB)
+        return () => window.removeEventListener("scroll", connectB)
+    })
 
     return (
         <ul className="Connect">

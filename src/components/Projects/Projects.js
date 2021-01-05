@@ -73,9 +73,9 @@ function Projects() {
     return (
         <div className="Projects">
             <div className="titleHolderProjects titleHolder">
-                <div className="line left"></div>
+                <div className="lCircle"></div>
                 <span>Featured Projects</span>
-                <div className="line right"></div>
+                <div className="line"></div>
             </div>
             <div className="Projects__items">
                 <div className="Projects__placeholder"></div>

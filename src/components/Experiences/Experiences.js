@@ -6,9 +6,9 @@ function Experiences() {
     return (
         <div className="Experiences">
             <div className="titleHolderExperiences titleHolder">
-                <div className="line left"></div>
+                <div className="lCircle"></div>
                 <span>Experiences</span>
-                <div className="line right"></div>
+                <div className="line"></div>
             </div>
             <div className="Experiences__bg">
                 <Experience 

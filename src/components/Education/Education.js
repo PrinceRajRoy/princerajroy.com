@@ -42,9 +42,9 @@ function Education() {
         <div className="Education">
             <div className="titleHolderEducation titleHolder">
                 <span className="titleHolderEducation__title">
-                    <div className="line left"></div>
+                    <div className="lCircle"></div>
                         <span>Education</span>
-                    <div className="line right"></div>
+                    <div className="line"></div>
                 </span>
             </div>
             <div className="Education__timeline">

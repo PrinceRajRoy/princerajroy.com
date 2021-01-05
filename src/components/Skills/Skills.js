@@ -9,9 +9,9 @@ function Skills() {
     return (
         <div className="Skills">
             <div className="titleHolderSkills titleHolder">
-                <div className="line left"></div>
+                <div className="lCircle"></div>
                     <span>Skills</span>
-                <div className="line right"></div>
+                <div className="line"></div>
             </div>
             <div className="Skills__bg">
                 <Skill icon={HTML} title={"Front-End Development"} desc="HTML, CSS, JS, SASS" subtitle="Some Frameworks" subdesc="ReactJS, Bootstrap, React-Spring, GSAP, Redux"/>
