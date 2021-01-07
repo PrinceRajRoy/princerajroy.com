@@ -3,6 +3,7 @@ $layout-breakpoint-sm: 600px
 $layout-breakpoint-md: 800px
 $layout-breakpoint-lg: 1000px
 $layout-breakpoint-xl: 1200px
+$layout-breakpoint-mm: 700px
 
 .Projects
     position: relative
@@ -119,12 +120,16 @@ $layout-breakpoint-xl: 1200px
         width: 100%
         &__items
             padding: 40px 0px 90px
-            grid-template-columns: repeat(12, 280px)
+            grid-template-columns: repeat(12, 33.3%)
             & > div
                 transform: scale(0.8)
         &__nav
             transform: scale(0.8)
             margin-top: -50px
+
+@media only screen and (max-width: $layout-breakpoint-mm)
+    .Projects__items
+        grid-template-columns: repeat(12, 100%)
 
 @media only screen and (max-width: $layout-breakpoint-sm)
     .Projects
