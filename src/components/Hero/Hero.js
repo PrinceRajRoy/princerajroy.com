@@ -26,6 +26,13 @@ function Hero() {
             duration: 1,
             ease: Power4.easeOut
         }, "-=2")
+        t1.fromTo(".Hero__palette", {
+            right: "-100%"
+        }, {
+            right: "0%",
+            duration: 1,
+            ease: Power4.easeOut
+        }, "-=2.5")
         gsap.to(".Hero__scroll > div", {
             y: 33,
             ease: Power1.easeInOut,
@@ -65,6 +72,14 @@ function Hero() {
                     <div></div>
                 </div>
                 <img className="Hero__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
+            </div>
+            <div className="Hero__palette">
+                <div className="Hero__palette--1"></div>
+                <div className="Hero__palette--2"></div>
+                <div className="Hero__palette--3"></div>
+                <div className="Hero__palette--4"></div>
+                <div className="Hero__palette--5"></div>
+                <div className="Hero__palette--6"></div>
             </div>
         </div>
     )

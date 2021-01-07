@@ -67,6 +67,28 @@ $layout-breakpoint-lg: 1000px
         background: var(--blue4)
         transform: translate(-4px, 1px)
         display: inline-block
+    &__palette
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: -2px 0px var(--blue5)
+        & > div
+            height: 30px
+            width: 30px
+            &:nth-last-child(n+1)
+                // border-bottom: 1px solid var(--blue4)
+        &--1
+            background: var(--white)
+        &--2
+            background: var(--blue0)
+        &--3
+            background: var(--blue1)
+        &--4
+            background: var(--blue2)
+        &--5
+            background: var(--blue3)
+        &--6
+            background: var(--blue4)
 
 @media only screen and (max-width: $layout-breakpoint-lg)
     .Hero__about
@@ -90,6 +112,12 @@ $layout-breakpoint-lg: 1000px
             font-size: 0.9rem
         &__blink
             height: 32px
+        &__palette
+            top: unset
+            bottom: 0
+            display: flex
+            transform: translateY(100%)
+            box-shadow: -2px 2px var(--blue5)
         
 @media only screen and (max-width: $layout-breakpoint-sm)
     .Hero
