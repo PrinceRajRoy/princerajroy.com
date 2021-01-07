@@ -25,6 +25,7 @@ function Hire() {
                 setStatus("Message Sent Successfully!")
                 setAlert(true)
                 e.target.reset()
+                document.getElementsByClassName("Hire__btn")[0].disabled = true
                 setTimeout(() => setAlert(false), 5000)
             }).catch((err) => {
                 setStatus(err)
