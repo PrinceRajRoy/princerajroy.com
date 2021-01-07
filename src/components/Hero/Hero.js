@@ -5,6 +5,7 @@ import './Hero.sass'
 
 function Hero() {
 
+    /* GSAP Stagger Animations on Page Load */
     useEffect(() => {
         const t1 = gsap.timeline()
         t1.from(".Hero", { 
@@ -54,6 +55,17 @@ function Hero() {
         window.scrollTo(hire.offsetLeft, hire.offsetTop - hire.clientHeight * 0.2)
     }
 
+    /* Copy Color Palette To Clipboard */
+    const copyPalette = (e) => {
+        var colorCode = getComputedStyle(e.target).getPropertyValue("background-color")
+        var tempInput = document.createElement("input")
+        tempInput.value = colorCode
+        document.body.appendChild(tempInput)
+        tempInput.select()
+        document.execCommand("Copy")
+        document.body.removeChild(tempInput)
+    }
+
     return (
         <div className="Hero">
             <div className="Hero__container">
@@ -74,12 +86,12 @@ function Hero() {
                 <img className="Hero__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
             </div>
             <div className="Hero__palette">
-                <div className="Hero__palette--1"></div>
-                <div className="Hero__palette--2"></div>
-                <div className="Hero__palette--3"></div>
-                <div className="Hero__palette--4"></div>
-                <div className="Hero__palette--5"></div>
-                <div className="Hero__palette--6"></div>
+                <div className="Hero__palette--1" onClick={(e) => copyPalette(e)}></div>
+                <div className="Hero__palette--2" onClick={(e) => copyPalette(e)}></div>
+                <div className="Hero__palette--3" onClick={(e) => copyPalette(e)}></div>
+                <div className="Hero__palette--4" onClick={(e) => copyPalette(e)}></div>
+                <div className="Hero__palette--5" onClick={(e) => copyPalette(e)}></div>
+                <div className="Hero__palette--6" onClick={(e) => copyPalette(e)}></div>
             </div>
         </div>
     )
