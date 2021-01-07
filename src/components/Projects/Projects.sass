@@ -7,7 +7,6 @@ $layout-breakpoint-mm: 700px
 
 .Projects
     position: relative
-    width: 75%
     margin: auto
     &::after
         content: ''
@@ -111,13 +110,8 @@ $layout-breakpoint-mm: 700px
             > span
                 border-width: 2px
 
-@media only screen and (max-width: $layout-breakpoint-xl)
-    .Projects
-        width: 100%
-
 @media only screen and (max-width: $layout-breakpoint-md)
     .Projects
-        width: 100%
         &__items
             padding: 40px 0px 90px
             grid-template-columns: repeat(12, 33.3%)
