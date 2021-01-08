@@ -1,35 +1,26 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import './Hire.sass'
 import emailjs from 'emailjs-com'
-import { animated, config, useSpring } from 'react-spring'
+import { NotifyContext } from '../../utilities/context/NotifyContext'
 
 function Hire() {
 
-    const [status, setStatus] = useState('Message Sent Successfully!')
-    const [alert, setAlert] = useState(false)
-
-    const props = useSpring({
-        right: alert ? "20px" : "-300px",
-        config: {
-            ...config.wobbly
-        }
-    })
+    const context = useContext(NotifyContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        document.getElementsByClassName("Hire__btn")[0].disabled = true
         const serviceId = process.env.REACT_APP_SERVICE_ID
         const templateId = process.env.REACT_APP_TEMPLATE_ID
         const userId = process.env.REACT_APP_USER_ID
         emailjs.sendForm(serviceId, templateId, e.target, userId)
             .then((res) => {
-                setStatus("Message Sent Successfully!")
-                setAlert(true)
+                context.setStatus("Message Sent Successfully!")
+                context.setAlert(true)
                 e.target.reset()
-                document.getElementsByClassName("Hire__btn")[0].disabled = true
-                setTimeout(() => setAlert(false), 5000)
             }).catch((err) => {
-                setStatus(err)
-                setStatus("Unsuccessfully, Try Again!")
+                context.setStatus("Unsuccessfully, Try Again!")
+                context.setAlert(true)
             })
     }
 
@@ -43,9 +34,6 @@ function Hire() {
             <label htmlFor="message" className="Hire__label">Message *</label>
             <textarea id="message" name="message" type="text" className="Hire__input" required/>
             <button className="Hire__btn">SUBMIT</button>
-            <animated.div style={props} className="Hire__status">
-                <div>{status}</div>
-            </animated.div>
         </form>
     )
 }

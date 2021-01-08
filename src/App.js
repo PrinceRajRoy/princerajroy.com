@@ -10,12 +10,13 @@ import Hire from './components/Hire/Hire';
 import Nav from './components/Nav/Nav';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import Notification from './components/Notification/Notification';
 
 function App() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    const containers = gsap.utils.toArray(".App > div:nth-child(n+3):nth-last-child(n+2)")
+    const containers = gsap.utils.toArray(".App > div:nth-child(n+3):nth-last-child(n+3)")
     containers.forEach((el) => {
         gsap.from(el, {
           scrollTrigger: {
@@ -55,6 +56,7 @@ function App() {
       <Education />
       <Hire />
       <Footer />
+      <Notification />
     </div>
   );
 }

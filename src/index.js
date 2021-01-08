@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NotifyContextProvider from './utilities/context/NotifyContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NotifyContextProvider>
+      <App />
+    </NotifyContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

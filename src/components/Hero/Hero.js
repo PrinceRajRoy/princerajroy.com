@@ -1,10 +1,13 @@
 import gsap, { Power1 } from 'gsap';
 import { Power4 } from 'gsap/gsap-core';
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
+import { NotifyContext } from '../../utilities/context/NotifyContext';
 import './Hero.sass'
 
 function Hero() {
 
+    const context = useContext(NotifyContext)
+    
     /* GSAP Stagger Animations on Page Load */
     useEffect(() => {
         const t1 = gsap.timeline()
@@ -64,6 +67,8 @@ function Hero() {
         tempInput.select()
         document.execCommand("Copy")
         document.body.removeChild(tempInput)
+        context.setStatus("Code Copied!")
+        context.setAlert(true)
     }
 
     return (
