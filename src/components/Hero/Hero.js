@@ -67,7 +67,7 @@ function Hero() {
         tempInput.select()
         document.execCommand("Copy")
         document.body.removeChild(tempInput)
-        context.setStatus("Code Copied!")
+        context.setStatus("Copied!")
         context.setAlert(true)
     }
 
