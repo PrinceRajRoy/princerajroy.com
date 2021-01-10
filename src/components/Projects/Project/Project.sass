@@ -1,53 +1,54 @@
 .Project
-    height: 384px
-    width: 224px
-    padding: 8px
-    margin: 20px auto 10px
-    border-radius: 24px
-    background: var(--white)
-    box-shadow: 0px 0px 50px -25px var(--blue5)
-    scroll-snap-align: center
-    transition: transform 0.5s
-    position: relative
-    &__image
-        height: 208px
-        width: 208px
-        object-fit: cover
-        border-radius: 24px
+    display: flex
+    align-items: flex-end
+    margin-top: 80px
+    &__container
+        width: 60%
+        height: 428px
+        padding: 50px 80px
+        background: var(--white)
+        box-shadow: 0px 4px 10px 1px rgba(94, 99, 182, 0.15)
+        border-radius: 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
     &__title
-        font-size: 0.88rem
-        font-weight: 600
-        margin-top: 16px
+        font-size: 40px
+        color: var(--c3)
+        text-transform: uppercase
     &__desc
-        color: var(--grey)
-        font-size: 0.8rem
-    &__link
-        background: var(--blue2)
-        color: var(--blue0)
-        font-weight: 600
-        font-size: 0.88rem
-        padding: 8px 12px
-        border-radius: 24px
-        cursor: pointer
-        text-decoration: none
-        display: none
-        position: absolute
-        left: 50%
-        bottom: 10px
-        transform: translateX(-50%)
-        pointer-events: auto
-    &__active
-        transform: scale(1.2) !important
-        height: 430px
-        & .Project__link
-            display: initial
-
-@media only screen and ( max-width:  800px)
-    .Project__active
-        transform: scale(1.1) !important
-
-@media only screen and ( max-width: 600px)
-    .Project
-        box-shadow: 0px 0px 60px -25px var(--blue5)
+        text-align: left
+        font-size: 1.1rem
+        width: 80%
+    &__githubLink
+        &--image
+            background: var(--c2)
+            padding: 10px 15px
+            border-radius: 10px
+    &__liveLink
+        margin-left: 24px
+        &--image
+            background: var(--c2)
+            padding: 10px 15px
+            border-radius: 10px
+    &__image
+        width: 430px
+        height: 370px
+        box-shadow: 0px 0px 0px 2px var(--c4)
+        border-radius: 20px
+        margin-left: -172px
+        transform: translate3d(0, 30px, 0)
+    &:nth-child(2n)
+        justify-content: flex-end
+        .Project
+            &__container
+                padding-right: 0px
+                padding-left: 210px
+            &__image
+                order: -1
+                z-index: 1
+                margin-right: -172px
+        
     
         

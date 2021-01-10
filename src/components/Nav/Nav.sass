@@ -13,8 +13,6 @@ $layout-breakpoint-xl: 1200px
     box-shadow: 0px 0px 4px 2px rgba(94, 99, 182, 0.25)
     overflow: hidden
     z-index: 999
-    &__active
-        border-bottom: 2px solid var(--c3)
     &__items
         list-style: none
         display: flex
@@ -27,6 +25,18 @@ $layout-breakpoint-xl: 1200px
         font-size: 16px
         color: var(--c3)
         font-weight: 700
+        cursor: pointer
+        &::before
+            content: ''
+            height: 2px
+            width: 100%
+            background: var(--c3)
+            transform: scale3d(0, 1, 1)
+            position: absolute
+            bottom: -2px
+            transition: 300ms
+        &--active::before
+            transform: scale3d(1, 1, 1)
     &__ham
         height: 48px
         width: 48px

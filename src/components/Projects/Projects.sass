@@ -6,135 +6,37 @@ $layout-breakpoint-xl: 1200px
 $layout-breakpoint-mm: 700px
 
 .Projects
+    padding: 60px 60px 0px
     position: relative
-    margin: auto
-    &::after
-        content: ''
-        background: linear-gradient(to right, transparent, var(--white) 75%, var(--white), var(--white))
-        height: 80%
-        width: 250px
-        position: absolute
-        top: 50%
-        right: -4px
-        transform: translateY(-50%) scale(1.2)
-    &::before
-        content: ''
-        background: linear-gradient(to left, transparent, var(--white) 75%, var(--white), var(--white))
-        height: 80%
-        width: 250px
-        position: absolute
-        top: 50%
-        left: -4px
-        transform: translateY(-50%) scale(1.2)
-        z-index: 2
-    &__items
-        display: grid
-        grid-template-columns: repeat(12, 33.3%)
-        position: relative
-        padding: 50px 0px 70px
-        scroll-behavior: smooth
-        overflow-x: scroll
-        scrollbar-width: none
-        -ms-overflow-style: none
-        pointer-events: none
-        &::-webkit-scrollbar
-            display: none
-    &__nav
+    background-image: url('../../utilities/images/ProjectBG3.svg'), url('../../utilities/images/ProjectBG2.svg')
+    background-position-y: 200px, 100%
+    background-repeat: no-repeat
+    background-size: contain
+    &__palettes
+        height: 48px
+        width: 268px
         display: flex
-        flex-direction: row
-        width: 140px
-        height: 24px
-        transform: scale(0.8)
-        justify-content: space-between
         align-items: center
-        margin: auto
-        & > div
-            transition: transform 1s
-        & > div:nth-child(1)
-            position: relative
-            height: 3px
-            width: 50px
-            background: var(--blue4)
-            transform-origin: right
-            cursor: pointer
-            &::before
-                content: ''
-                border: solid var(--blue4)
-                border-width: 0px 0px 2.5px 2.5px
-                padding: 4px
-                transform: translate(0%, -3.5px) rotate(45deg)
-                position: absolute
-                left: 0
-        & > div:nth-child(2)
-            background: var(--blue4)
-            border-radius: 50%
-            height: 8px
-            width: 8px
-        & > div:nth-child(3)
-            position: relative
-            height: 3px
-            width: 50px
-            background: var(--blue4)
-            transform-origin: left
-            cursor: pointer
-            &::after
-                content: ''
-                border: solid var(--blue4)
-                border-width: 2.5px 2.5px 0px 0px
-                padding: 4px
-                transform: translate(0%, -3.5px) rotate(45deg)
-                position: absolute
-                right: 0
-        &--button1
-            position: absolute
-            left: -5px
-            height: 40px
-            width: 40px
-            transform: translate(-15px, -50%)
-            background: transparent
-            outline: none
-            border: 3px solid
-            border-radius: 50%
-        &--button2
-            position: absolute
-            right: -5px
-            height: 40px
-            width: 40px
-            transform: translate(15px, -50%)
-            background: transparent
-            outline: none
-            border: 3px solid
-            border-radius: 50%
-
-@media only screen and (max-width: $layout-breakpoint-md)
-    .Projects
-        &__items
-            padding: 40px 0px 90px
-            & > div > div
-                transform: scale(0.8)
-        &__nav
-            transform: scale(0.8)
-            margin-top: -50px
-
-@media only screen and (max-width: $layout-breakpoint-mm)
-    .Projects__items
-        grid-template-columns: repeat(12, 100%)
-
-@media only screen and (max-width: $layout-breakpoint-sm)
-    .Projects
-        &::before
-            width: 100px
-            left: -15px
-        &::after
-            width: 100px
-            right: -15px
-
-@media only screen and (max-width: $layout-breakpoint-xs)
-    .Projects
-        &::before
-            width: 30px
-            left: 0
-        &::after
-            width: 30px
-            right: 0
-            
+        justify-content: space-evenly
+        background: var(--white)
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25)
+        position: absolute
+        left: 0
+        top: 0
+    &__palette
+        width: 40px
+        height: 40px
+        border: 1px solid var(--black)
+        cursor: pointer
+        &--1
+            background: var(--white)
+        &--2
+            background: var(--c1)
+        &--3
+            background: var(--c2)
+        &--4
+            background: var(--c3)
+        &--5
+            background: var(--c4)
+        &--6
+            background: var(--black)

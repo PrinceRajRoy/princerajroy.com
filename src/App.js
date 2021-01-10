@@ -16,49 +16,35 @@ import Connect from './components/Connect/Connect';
 function App() {
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    const containers = gsap.utils.toArray(".App > div:nth-child(n+3):nth-last-child(n+3)")
-    containers.forEach((el) => {
-        gsap.from(el, {
-          scrollTrigger: {
-            trigger: el,
-            start: "top bottom"
-          },
-          y: 50,
-          opacity: 0,
-          duration: 1.2,
-          ease: Power2.easeInOut
-      })
-    })
-
-    const titles = gsap.utils.toArray(".line")
-
-    titles.forEach((el) => {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el
-        },
-        transform: "scaleX(0)",
-        opacity: 0,
-        duration: 2,
-        ease: Power2.easeInOut
-      })
-    })
+    // gsap.registerPlugin(ScrollTrigger)
+    // const containers = gsap.utils.toArray(".App > div:nth-child(n+3):nth-last-child(n+3)")
+    // containers.forEach((el) => {
+    //     gsap.from(el, {
+    //       scrollTrigger: {
+    //         trigger: el,
+    //         start: "top bottom"
+    //       },
+    //       y: 50,
+    //       opacity: 0,
+    //       duration: 1.2,
+    //       ease: Power2.easeInOut
+    //   })
+    // })
 
   }, [])
 
   return (
     <div className="App">
+      <Notification />
       <Nav />
       <Connect />
       <Hero />
-      {/* <Projects />
+      <Projects />
       <Skills />
       <Experiences />
       <Education />
       <Hire />
       <Footer />
-      <Notification /> */}
     </div>
   );
 }

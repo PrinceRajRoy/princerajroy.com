@@ -1,12 +1,9 @@
 import gsap, { Power1 } from 'gsap';
 import { Power4 } from 'gsap/gsap-core';
-import React, { useContext, useEffect } from 'react'
-import { NotifyContext } from '../../utilities/context/NotifyContext';
+import React, { useEffect } from 'react'
 import './Hero.sass'
 
 function Hero() {
-
-    const context = useContext(NotifyContext)
     
     /* GSAP Stagger Animations on Page Load */
     useEffect(() => {
@@ -31,21 +28,9 @@ function Hero() {
         window.scrollTo(hire.offsetLeft, hire.offsetTop - hire.clientHeight * 0.2)
     }
 
-    /* Copy Color Palette To Clipboard */
-    const copyPalette = (e) => {
-        var colorCode = getComputedStyle(e.target).getPropertyValue("background-color")
-        var tempInput = document.createElement("input")
-        tempInput.value = colorCode
-        document.body.appendChild(tempInput)
-        tempInput.select()
-        document.execCommand("Copy")
-        document.body.removeChild(tempInput)
-        context.setStatus("Copied!")
-        context.setAlert(true)
-    }
-
     return (
         <div className="Hero">
+            <div className="Hero__name">Prince Raj Roy</div>
             <img className="Hero__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
             <div className="Hero__container">
                 <div className="Hero__title">&#x3c;Hey!<br /> I'm Prince  <span className="Hero__blink"></span></div>

@@ -25,16 +25,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue2);
+  background: var(--c2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue3);
+  background: var(--c3);
 }
-
-/* .App > div:nth-child(n+3) {
-  margin: 120px auto 0px;
-} */
 
 body, html {
   margin: 0;
@@ -49,11 +45,10 @@ ul {
 }
 
 .titleHolder {
-  margin: -15px auto 0;
+  margin: auto;
+  color: var(--c3);
+  font-size: 35px;
   font-weight: 700;
-  font-size: 1.7rem;
-  color: var(--blue3);
-  position: relative;
 }
 
 .line {

@@ -3,7 +3,6 @@ import FB from '../../utilities/images/facebook.svg'
 import GH from '../../utilities/images/github.svg'
 import IG from '../../utilities/images/insta.svg'
 import LI from '../../utilities/images/linkedin.svg'
-import { useEffect, useState } from 'react'
 
 function Connect() {
 
