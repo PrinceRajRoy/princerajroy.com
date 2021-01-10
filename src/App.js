@@ -11,6 +11,7 @@ import Nav from './components/Nav/Nav';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Notification from './components/Notification/Notification';
+import Connect from './components/Connect/Connect';
 
 function App() {
 
@@ -49,14 +50,15 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      <Connect />
       <Hero />
-      <Projects />
+      {/* <Projects />
       <Skills />
       <Experiences />
       <Education />
       <Hire />
       <Footer />
-      <Notification />
+      <Notification /> */}
     </div>
   );
 }

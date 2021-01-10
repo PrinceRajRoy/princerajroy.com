@@ -3,133 +3,57 @@ $layout-breakpoint-mid: 900px
 $layout-breakpoint-xl: 1200px
 
 .Nav
-    &__container
-        background-color: var(--blue3)
-        position: fixed
-        // right: -90%
-        // width: 90%
-        right: -280px
-        width: 280px
-        height: 100%
-        grid-area: nav
-        display: flex
-        // display: grid
-        padding: 45px 0
-        flex-direction: column
-        // grid-template-rows: repeat(8, 60px)
-        // grid-template-areas: "profile" "profile" "name" "items" "items" "items" "items" "items"
-        transform: translate3d(0, 0, 0)
-        transition: transform 0.5s
-        z-index: 998
-
-    &__name
-        color: var(--blue0)
-        padding: 10px
-        margin-bottom: 10px
-        grid-area: name
-        font-size: 1.1rem
-        font-weight: 800
-        cursor: pointer
-
-    &__items
-        color: var(--blue0)
-        list-style-type: none
-        padding: 0
-        width: 100%
-        margin: 10px 0
-        position: relative
-        grid-area: items
-        display: grid
-        grid-template-rows: repeat(5, 50px)
-        & > li
-            cursor: pointer
-            display: flex
-            justify-content: center
-            align-items: center
-            z-index: 2
-    &__active
-        position: absolute
-        height: 40px
-        border-left: 5px solid var(--blue4)
-        border-right: 5px solid var(--blue4)
-        transform: translateX(-50%)
-        background: var(--blue2)
-        z-index: 1
-    &__profile
-        height: 130px
-        width: 130px
-        margin: auto
-        grid-area: profile
-        // margin: 0 auto
-        box-shadow: 0px 0px 4px 9px rgba(16, 41, 58, 0.25)
-        border-radius: 50%
-.ham
     position: fixed
-    top: 10px
-    right: 10px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    height: 28px
-    width: 40px
+    top: 16px
+    right: 30px
+    height: 48px
+    width: 48px
+    background: var(--white)
+    border-radius: 24px
+    box-shadow: 0px 0px 4px 2px rgba(94, 99, 182, 0.25)
+    overflow: hidden
     z-index: 999
-    cursor: pointer
+    &__active
+        border-bottom: 2px solid var(--c3)
+    &__items
+        list-style: none
+        display: flex
+        position: absolute
+        right: 48px
+        top: 50%
+        transform: translate3d(0, -50%, 0)
     &__item
-        height: 4px
-        border-radius: 5px
-        width: inherit
-        background: var(--blue0)
-        transition: transform 0.2s
-
-#Nav__check
-    display: none
-    &:checked + .ham > .ham__item
+        margin-right: 20px
+        font-size: 16px
+        color: var(--c3)
+        font-weight: 700
+    &__ham
+        height: 48px
+        width: 48px
+        padding: 16px 12px
+        float: right
+        cursor: pointer
+        &--item
+            background: var(--c3)
+            height: 3px
+            width: 24px
+            position: absolute
+            top: 50%
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
             &:nth-child(1)
-                transform: translate3d(0, 14px, 0) rotate(45deg)
+                transform: translate3d(0, -8px, 0)
             &:nth-child(2)
-                transform: scale(0, 1)
+                transform: translate3d(0, 0, 0)
             &:nth-child(3)
-                transform: translate3d(0, -14px, 0) rotate(-45deg)
-    &:checked ~ .Nav__container
-        transform: translate3d(-100%, 0, 0)
-
-@media only screen and (min-width: $layout-breakpoint-md)
-    .ham
+                transform: translate3d(0, 8px, 0)
+    &__checkbox
         display: none
-    .Nav
-        position: fixed
-        top: 0
-        z-index: 1
-        width: 100%
-        &__container
-            position: initial
-            height: 60px
-            width: 100%
-            padding: 0
-            display: grid
-            grid-template-columns: repeat(12, 1fr)
-            grid-template-areas: "name name name items items items items items items connect connect connect"
-        &__name
-            margin: auto
-            padding: 0
-        &__items
-            display: flex
-            & > li:nth-child(n + 2)
-                padding: 0 10px
-        &__active
-            top: 0
-            left: 0
-            width: 70px
-            transform: translate(0)
-            border-width: 1px 
-            border-radius: 10px
-        &__profile
-            display: none
-
-@media only screen and (min-width: $layout-breakpoint-md) and (max-width: $layout-breakpoint-mid)
-    .Nav__items > li
-        font-size: 0.915rem
-
-@media only screen and (min-width: $layout-breakpoint-xl)
-    .Nav__items > li
-        padding: 0 25px
+        &:checked
+            & ~ .Nav__ham
+                & > .Nav__ham--item
+                    &:nth-child(1)
+                        transform: translate3d(0, -50%, 0) rotate(45deg)
+                    &:nth-child(2)
+                        transform: translate3d(0, -50%, 0) scale(0.1, 1)
+                    &:nth-child(3)
+                        transform: translate3d(0, -50%, 0) rotate(-45deg)

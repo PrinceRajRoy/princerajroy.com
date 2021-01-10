@@ -1,54 +1,12 @@
 .Connect
-    position: relative
-    list-style-type: none
-    width: 90%
-    margin: 0 auto
-    padding-left: 0
-    grid-area: connect
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    background: var(--blue3)
-    padding: 10px 0
-    > li
-        z-index: 1
-        & img
-            height: 30px
-            z-index: 2
-    &::before
-        display: none
-
-@media only screen and (min-width: 600px)
-    .Connect::before
-        content: ''
-        position: absolute
-        top: 0
-        left: -20px
-        height: 100%
-        width: 50px
-        background: var(--blue3)
-        transform-origin: right top
-        transform: skew(-27deg)
-        transition: all .5s cubic-bezier(0,.42,.31,.77)
-        z-index: 0
-
-@media only screen and (min-width: 800px)
-    .Connect
-        width: 100%
-        height: inherit
-        padding: 0 30px
-        background-image: linear-gradient(to left, var(--white) 50%, var(--blue3) 50%)
-        background-position: 100% 0
-        background-size: 200% 100%
-        transition: all .5s cubic-bezier(0,.42,.31,.77)
-        &::before
-            display: block
-        &.active
-            background-position: 0 -100%
-            &::before
-                left: 100%
-        > li
-            margin: auto
-
-@media only screen and (min-width: 1200px)
-    .Connect
-        padding: 0 50px
+    position: absolute
+    right: 43px
+    top: 80px
+    list-style: none
+    &__item
+        margin-top: 15px
+        &:last-child
+            height: 80px
+            width: 1px
+            margin: 15px auto 0px
+            background: linear-gradient(to bottom, var(--c2) 1.05%, var(--white) 100%)
