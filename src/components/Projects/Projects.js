@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Project from './Project/Project'
 import './Projects.sass'
 
@@ -32,7 +32,7 @@ function Projects() {
         const items = document.querySelectorAll('.Project')
         items.forEach((el, index) => {
             gsap.to(el.querySelector('.Project__image'), {
-                y: '-60px',
+                y: '-100px',
                 ease: 'none',
                 scrollTrigger: {
                     trigger: el,

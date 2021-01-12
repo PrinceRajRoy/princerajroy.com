@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import './Project.sass'
 
 import GithubLink from '../../../utilities/images/githublink.svg'

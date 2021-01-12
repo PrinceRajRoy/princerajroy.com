@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import gsap, { Power2 } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import gsap, { Power2 } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './App.css';
 import Education from './components/Education/Education';
 import Experiences from './components/Experiences/Experiences';
