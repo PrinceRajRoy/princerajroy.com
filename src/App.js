@@ -37,7 +37,7 @@ function App() {
         scrollTrigger: {
           trigger: el
         },
-        transform: "scaleX(0)",
+        transform: "scale(0)",
         opacity: 0,
         duration: 2,
         ease: Power2.easeInOut
