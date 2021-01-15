@@ -1,17 +1,25 @@
-import React from 'react'
 import './Project.sass'
 
-function Project({ active, title, image, desc, link}) {
+import GithubLink from '../../../utilities/images/githublink.svg'
+import LiveLink from '../../../utilities/images/livelink.svg'
+
+function Project({ title, image, desc, link, right }) {
+    
     return (
-        <div>
-            <div className={`Project ${active ? "Project__active" : ""}`}>
-                <img className="Project__image" src={image} alt={title} />
+        <div className={`Project ${ right ? "Project__right" : ""}`}>
+            <div className="Project__container">
                 <div className="Project__title">{title}</div>
-                <p className="Project__desc">{desc}</p>
-                <a className="Project__link" href={link} target="_blank" rel="noopener noreferrer">
-                    Find More
-                </a>
+                <div className="Project__desc">{desc}</div>
+                <div className="Project__links">
+                    <a className="Project__githubLink" href={link} target="_blank" rel="noopener noreferrer">
+                        <img className="Project__githubLink--image" src={GithubLink} alt="Github Link"/>
+                    </a>
+                    { link && <a className="Project__liveLink" href={link} target="_blank" rel="noopener noreferrer">
+                        <img className="Project__liveLink--image" src={LiveLink} alt="Live Preview"/>
+                    </a>}
+                </div>
             </div>
+            <img className="Project__image" src={image} alt={title} />
         </div>
     )
 }

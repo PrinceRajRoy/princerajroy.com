@@ -11,6 +11,7 @@ import Nav from './components/Nav/Nav';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Notification from './components/Notification/Notification';
+import Connect from './components/Connect/Connect';
 
 function App() {
 
@@ -34,7 +35,9 @@ function App() {
 
   return (
     <div className="App">
+      <Notification />
       <Nav />
+      <Connect />
       <Hero />
       <Projects />
       <Skills />
@@ -42,7 +45,6 @@ function App() {
       <Education />
       <Hire />
       <Footer />
-      <Notification />
     </div>
   );
 }

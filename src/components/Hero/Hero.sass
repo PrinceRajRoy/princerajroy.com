@@ -1,128 +1,163 @@
+$layout-breakpoint-xs: 480px
 $layout-breakpoint-sm: 600px
-$layout-breakpoint-md: 800px
-$layout-breakpoint-lg: 1000px
+$layout-breakpoint-md: 768px
+$layout-breakpoint-lg: 1024px
+$layout-breakpoint-xl: 1200px
 
 .Hero
-    height: 100vh
+    min-height: 100vh
+    background: url('../../utilities/images/HeroBG.svg')
+    background-position: left center
+    background-repeat: no-repeat
+    background-size: 595px 100%
     display: grid
-    grid-template-columns: repeat(4, 1fr)
-    grid-template-areas: "hero hero hero ." ". scrollArrow scrollArrow ."
-    &__container
-        position: relative
-        height: inherit
-        background: var(--blue2)
-        grid-area: hero
-        padding-left: 15%
-        padding-top: 200px
-        text-align: left
+    justify-content: center
+    align-items: center
+    grid-template-columns: repeat(3, 190px) repeat(5, 1fr)
+    grid-template-areas: ". . . container container container container ."
+    &__name
+        font-size: 1.3rem
+        font-weight: 700
+        color: var(--white)
+        position: absolute
+        left: 20px
+        top: 29.6px
     &__profile
-        height: 200px
-        width: 200px
+        height: 250px
+        width: 250px
         border-radius: 50%
+        border: 10px solid var(--c2)
         position: absolute
         top: 50%
-        right: 0
-        transform: translate(50%, -50%)
-        box-shadow: 0px 0px 4px 16px rgba(15, 76, 117, 0.25)
+        left: 230px
+        transform: translate3d(0, -50%, 0)
+    &__container
+        grid-area: container
+        text-align: left
+        display: flex
+        flex-direction: column
+        > div:not(:last-child)
+            margin-bottom: 30px
     &__title
-        font-size: 3rem
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-size: 4rem
+        font-weight: 700
+        color: var(--c4)
+        &--br
+            display: block
     &__about
-        padding: 20px 0 40px
         font-size: 1.2rem
-        word-spacing: 0.5px
-        width: 80%
+        font-weight: 400
+        color: var(--c4)
     &__button
-        background: var(--blue0)
-        color: var(--blue2)
-        font-weight: 600
-        font-size: 1.1rem
-        height: 40px
-        padding: 0 15px
-        border-radius: 10px
+        padding: 12.8px 14.4px
+        background: var(--c2)
+        color: var(--white)
+        font-size: 16px
+        font-weight: 700
         border: none
-        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25)
-        cursor: pointer
+        border-radius: 10px
         outline: none
+        cursor: pointer
         &:nth-child(2)
-            margin-left: 30px
+            margin-left: 24px
     &__scroll
-        height: 60px
-        width: 30px
-        border: 4px solid var(--white)
-        border-radius: 25px
-        margin-top: 30px
+        height: 64px
+        width: 28.8px
+        border: 3.2px solid var(--c2)
+        border-radius: 22px
         position: relative
         & > div
-            height: 18px
-            width: 18px
-            background: var(--white)
+            height: 20px
+            width: 20px
+            background: var(--c2)
             border-radius: 50%
             position: absolute
             transform: translate(-50%, 1px)
             left: 50%
     &__blink
-        height: 48px
+        height: 4rem
         width: 2.5px
-        background: var(--blue4)
+        background: var(--c4)
         transform: translate(-4px, 1px)
         display: inline-block
-    &__palette
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        box-shadow: -2px 0px var(--blue5)
-        cursor: pointer
-        & > div
-            height: 30px
-            width: 30px
-            &:nth-last-child(n+1)
-        &--1
-            background: var(--white)
-        &--2
-            background: var(--blue0)
-        &--3
-            background: var(--blue1)
-        &--4
-            background: var(--blue2)
-        &--5
-            background: var(--blue3)
-        &--6
-            background: var(--blue4)
+
+/*----------------------------------Media Queries----------------------------------*/
+@media only screen and (max-width: $layout-breakpoint-xl)
+    .Hero
+        background-position: -140px center
+        grid-template-columns: repeat(3, 150px) repeat(5, 1fr)
+        &__title
+            font-size: 3.5rem
+        &__blink
+            height: 3.5rem
+        &__about
+            font-size: 1.1rem
+        &__profile
+            left: 90px
 
 @media only screen and (max-width: $layout-breakpoint-lg)
-    .Hero__about
-        font-size: 1.1rem
+    .Hero
+        grid-template-columns: repeat(3, 125px) repeat(5, 1fr)
+        &__title
+            font-size: 3rem
+        &__blink
+            height: 3.5rem
+        &__about
+            font-size: 1rem
+        &__profile
+            height: 202px
+            width: 202px
+            left: 120px
 
 @media only screen and (max-width: $layout-breakpoint-md)
     .Hero
-        height: 100vh
-        grid-template-columns: repeat(1, 1fr)
-        grid-template-areas: "hero"
-        &__container
-            padding: 0 80px
-            display: flex
-            flex-direction: column
-            justify-content: center
+        background: url('../../utilities/images/HeroBGM.svg')
+        background-repeat: no-repeat
+        background-position: top left
+        background-size: 100% 60%
+        grid-template: repeat(3, 100px) repeat(5, 1fr) / none
+        grid-template-areas: '.' '.' '.' 'container' 'container' 'container' 'container' '.'
         &__profile
-            display: none
+            height: 202px
+            width: 202px
+            left: 50%
+            top: 80px
+            transform: translate3d(-50%, 0, 0)
+        &__container
+            align-items: center
+            text-align: center
+            > div:not(:last-child)
+                margin-bottom: 20px
         &__title
-            font-size: 2rem
-        &__about
-            font-size: 1rem
+            font-size: 2.5rem
+            &--br
+                display: none
         &__blink
-            height: 32px
-        &__palette
-            top: unset
-            bottom: 0
-            display: flex
-            transform: translateY(100%)
-            box-shadow: -2px 2px var(--blue5)
-        
-@media only screen and (max-width: $layout-breakpoint-sm)
+            height: 2.5rem
+        &__about
+            width: 70%
+            font-size: 1rem
+            
+@media only screen and (max-width: $layout-breakpoint-xs)
     .Hero
         &__container
-            padding: 0 15px
+            align-items: flex-start
+            text-align: left
+            padding: 0 11%
+        &__title
+            font-size: 1.81rem
+        &__blink
+            height: 2rem
         &__about
             width: 100%
-            font-size: 0.9rem
+            font-size: 0.8rem
+        &__button
+            padding: 10px 12px
+            font-size: 13px
+        &__scroll
+            height: 56px
+            width: 24px
+            & > div
+                height: 16px
+                width: 16px
+                transform: translate(-50%, 0px)

@@ -40,12 +40,8 @@ function Education() {
 
     return (
         <div className="Education">
-            <div className="titleHolderEducation titleHolder">
-                <span className="titleHolderEducation__title">
-                    <div className="lCircle"></div>
-                        <span>Education</span>
-                    <div className="line"></div>
-                </span>
+            <div className="titleHolder">
+                Education
             </div>
             <div className="Education__timeline">
                 <div className="Education__item">

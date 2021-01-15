@@ -4,26 +4,12 @@ $layout-breakpoint-md: 800px
 $layout-breakpoint-lg: 1000px
 $layout-breakpoint-xl: 1200px
 
-.Skills__bg
-    width: 92%
-    height: 280px
-    padding: 0 30px
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    background: rgba(15, 76, 117, 0.4)
-    margin: 120px auto 0
-
-@media only screen and (max-width: $layout-breakpoint-xl)
-    .Skills__bg
-        margin: 150px auto 0
-        width: 100%
-        grid-template-columns: repeat(2, 1fr)
-        height: 450px
-
-@media only screen and (max-width: $layout-breakpoint-sm)
-    .Skills__bg
-        margin: 40px auto 0
-        grid-template: repeat(4, 300px) / repeat(1, 1fr)
-        height: fit-content
-        gap: 10px
-        padding: 10px 0
+.Skills
+    margin: auto
+    padding-top: 80px
+    width: 80%
+    height: 90vh
+    &__container
+        margin: 60px auto 0px
+        display: flex
+        justify-content: space-around

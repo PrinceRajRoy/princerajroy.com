@@ -1,79 +1,75 @@
 import { useEffect, useState } from 'react';
 import './Nav.sass';
-import Connect from '../Connect/Connect';
 import { useSpring, animated, config } from 'react-spring';
 import gsap from 'gsap'
+import { Power4 } from 'gsap/gsap-core';
 
 function Nav() {
 
-    const [active, setActive] = useState(0)
-    const [left, setLeft] = useState(0)
-    const [width, setWidth] = useState(70)
-    const [winwidth, setWinwidth] = useState(window.innerWidth)
+    const [active, setActive] = useState(false)
 
-    /* Props For Active Nav BG */
     const props = useSpring({
-        top: winwidth <= 799 ? `${active * 50 + 5}px` : '0px',
-        left: winwidth > 799 ? `${left}px` : '140px',
-        width: winwidth > 799 ? `${width}px` : '280px',
-        config: {
-            ...config.wobbly
-        }
+        width: active ? `520px` : '48px',
+        config: active ? config.wobbly : config.stiff
     })
+    
+    useEffect(() => {
+        const t1 = gsap.timeline({ paused: true })
+        t1.fromTo(".Nav__item", {
+            x: "20px",
+            opacity: 0
+        }, {
+            x: "0px",
+            opacity: 1,
+            stagger: 0.1,
+            ease: Power4.easeOut,
+            delay: 0.3
+        })
+        return active ? t1.play() : t1.reverse()
+    }, [active])
 
     /* Scroll To The Clicked Nav Item Section */
-    const scroll = (target) => {
+    const scroll = (target, index) => {
         target = document.getElementsByClassName(target)[0]
-        window.scrollTo(target.offsetLeft, target.offsetTop - (window.innerWidth > 799 ? 60 : 40))
+        window.scrollTo(target.offsetLeft, target.offsetTop)
     }
+    
 
-    /* For Moving Active Nav Item Based on Window Scroll Position */
     useEffect(() => {
-        var containers = gsap.utils.toArray(".App > div:nth-child(n+2):nth-last-child(n+3)")
-        var items = gsap.utils.toArray(".Nav__items > li:nth-child(n+1):nth-last-child(n+1)")
+        var items = document.querySelectorAll(".Nav__item")
         const navActivate = () => {
-            var top = window.pageYOffset
-            containers.forEach((el, index) => {
-                if((el.offsetTop <= top + 200) && (el.offsetTop + el.offsetHeight > top)) {
-                    window.innerWidth > 799 ? setLeft(items[index + 1].offsetLeft) : setActive(index)
-                    setWidth(items[index + 1].offsetWidth)
+            let scrollTop = window.pageYOffset
+            items.forEach((el, index) => {
+                let scrollTarget = document.querySelector(`.${el.dataset.target}`)
+                if((scrollTarget.offsetTop <= scrollTop) && (scrollTarget.offsetTop + scrollTarget.offsetHeight > scrollTop)) {
+                    el.classList.add('Nav__item--active')
+                } else {
+                    el.classList.remove('Nav__item--active')
                 }
             })
-            /* Update Window Width For Proper Animations on Window Resizing */
-            setWinwidth(window.innerWidth)
         }
         window.addEventListener("scroll", navActivate)
-
-        /* For Maintaining Correct Nav Active While Window Resizing */
-        window.addEventListener("resize", navActivate)
         return () => {
             window.removeEventListener("scroll", navActivate)
-            window.removeEventListener("resize", navActivate)
         }
     }, [])
 
     return (
-        <div className="Nav">
-            <input type='checkbox' id="Nav__check" />
-            <label className="ham" htmlFor="Nav__check">
-                <div className="ham__item"></div>
-                <div className="ham__item"></div>
-                <div className="ham__item"></div>
+        <animated.div className="Nav" style={props}>
+            <div className="Nav__items">
+                <li className={`Nav__item Nav__item--active`} data-target="Hero" onClick={(e) => scroll("Hero", 0)}>About</li>
+                <li className={`Nav__item`} data-target="Projects" onClick={(e) => scroll("Projects", 1)}>Projects</li>
+                <li className={`Nav__item`} data-target="Skills" onClick={(e) => scroll("Skills", 2)}>Skills</li>
+                <li className={`Nav__item`} data-target="Experiences" onClick={(e) => scroll("Experiences", 3)}>Experiences</li>
+                <li className={`Nav__item`} data-target="Education" onClick={(e) => scroll("Education", 4)}>Education</li>
+            </div>
+            <input className="Nav__checkbox" type='checkbox' id="Nav__ham" />
+            <label className="Nav__ham" htmlFor="Nav__ham" onClick={() => setActive(!active)}>
+                <div className="Nav__ham--item"></div>
+                <div className="Nav__ham--item"></div>
+                <div className="Nav__ham--item"></div>
             </label>
-            <nav className="Nav__container">
-                <img className="Nav__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
-                <span className="Nav__name" onClick={() => window.scrollTo(0, 0)}>Prince Raj Roy</span>
-                <ul className="Nav__items">
-                    <animated.li className="Nav__active" style={props}/>
-                    <li onClick={(e) => scroll("Hero")}>About</li>
-                    <li onClick={(e) => scroll("Projects")}>Projects</li>
-                    <li onClick={(e) => scroll("Skills")}>Skills</li>
-                    <li onClick={(e) => scroll("Experiences")}>Experiences</li>
-                    <li onClick={(e) => scroll("Education")}>Education</li>
-                </ul>
-                <Connect />
-            </nav>
-        </div>
+        </animated.div>
     )
 }
 

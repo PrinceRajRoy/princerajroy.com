@@ -6,11 +6,14 @@ $layout-breakpoint-lg: 1000px
 .Education
     position: relative
     width: 1000px
-    margin: 100px auto
+    max-width: 100%
+    padding-top: 80px
+    margin: auto
+    overflow: hidden
     &__item
         clear: both
     &__timeline
-        margin: 50px auto
+        margin: 60px auto
         padding-bottom: 2px
         width: 80%
         font-size: 0.8rem
@@ -19,7 +22,7 @@ $layout-breakpoint-lg: 1000px
             content: ''
             width: 3px
             height: 100%
-            background: var(--blue3)
+            background: var(--c3)
             position: absolute
             left: 50%
             transform: translateX(-50%)
@@ -27,7 +30,7 @@ $layout-breakpoint-lg: 1000px
             content: ''
             height: 3px
             width: 250px
-            background: var(--blue3)
+            background: var(--c3)
             position: absolute
             bottom: 0
             transform: translateX(-50%)
@@ -38,7 +41,8 @@ $layout-breakpoint-lg: 1000px
             width: 45%
             margin-bottom: 50px
             border-radius: 5px
-            background: var(--blue0)
+            color: var(--c4)
+            background: var(--white)
             box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1)
             &.right
                 float: right
@@ -46,11 +50,11 @@ $layout-breakpoint-lg: 1000px
                     right: unset
                     left: -2%
                     border-left: 0
-                    border-right: 10px solid var(--blue3)
+                    border-right: 10px solid var(--c3)
 
 .institute
-    color: var(--blue0)
-    background: var(--blue3)
+    color: var(--white)
+    background: var(--c3)
     padding: 15px 8px
     position: relative
     font-size: 1rem
@@ -59,7 +63,7 @@ $layout-breakpoint-lg: 1000px
         content: ''
         border-top: 10px solid transparent
         border-bottom: 10px solid transparent
-        border-left: 10px solid var(--blue3)
+        border-left: 10px solid var(--c3)
         position: absolute
         right: -2%
         top: 50%
@@ -80,7 +84,7 @@ $layout-breakpoint-lg: 1000px
     border-radius: 50%
     position: absolute
     left: 50%
-    background: var(--blue3)
+    background: var(--c3)
     transform: translateX(-50%)
     & > img
         height: 25px
@@ -124,7 +128,7 @@ $layout-breakpoint-lg: 1000px
                     right: unset
                     left: -2%
                     border-left: 0
-                    border-right: 10px solid var(--blue3)
+                    border-right: 10px solid var(--c3)
                 &.right
                     float: unset
 

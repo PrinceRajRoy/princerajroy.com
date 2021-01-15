@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-  --grey: #737272;
   --white: #FFFFFF;
-  --blue0: #F0F9FF;
-  --blue1: #bbe1fa;
-  --blue2: #3282b8;
-  --blue3: #0f4c75;
-  --blue4: #1b262c;
-  --blue5: #7090B0;
+  --black: #000000;
+  --c1: #F5C7F7;
+  --c2: #A393EB;
+  --c3: #5E63B6;
+  --c4: #27296D;
 }
 
 * {
@@ -19,10 +17,7 @@
   height: max-content;
   width: 100%;
   text-align: center;
-  overflow-x: hidden;
-  background: url('./utilities/images/BG.svg') fixed;
-  /* background-size: cover; */
-  z-index: -1;
+  /* overflow-x: hidden; */
 }
 
 ::-webkit-scrollbar {
@@ -30,20 +25,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue2);
+  background: var(--c2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue3);
-}
-
-.App > div:nth-child(n+3) {
-  margin: 120px auto 0px;
+  background: var(--c3);
 }
 
 body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: Montserrat, sans-serif;
   /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
 }
@@ -54,11 +46,10 @@ ul {
 }
 
 .titleHolder {
-  margin: -15px auto 0;
+  margin: auto;
+  color: var(--c3);
+  font-size: 35px;
   font-weight: 700;
-  font-size: 1.7rem;
-  color: var(--blue3);
-  position: relative;
 }
 
 .line {
