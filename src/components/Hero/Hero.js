@@ -8,7 +8,7 @@ function Hero() {
     /* GSAP Stagger Animations on Page Load */
     useEffect(() => {
         gsap.to(".Hero__scroll > div", {
-            y: 37,
+            y: window.innerWidth > 480 ? 37 : 33.5,
             ease: Power1.easeInOut,
             repeat: -1,
             duration: 0.8,
@@ -33,7 +33,7 @@ function Hero() {
             <div className="Hero__name">Prince Raj Roy</div>
             <img className="Hero__profile" src={"https://princerajroy.site/Profile.jpg"} alt="Profile"/>
             <div className="Hero__container">
-                <div className="Hero__title">&#x3c;Hey!<br /> I'm Prince  <span className="Hero__blink"></span></div>
+                <div className="Hero__title">&#x3c;Hey!<span className='Hero__title--br'></span> I'm Prince  <span className="Hero__blink"></span></div>
                 <div className="Hero__about">
                     A <b>full stack web developer</b> from Assam, India.
                     I love crafting clean user friendly web experience and make awesome web apps.

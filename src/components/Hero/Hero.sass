@@ -5,23 +5,23 @@ $layout-breakpoint-lg: 1024px
 $layout-breakpoint-xl: 1200px
 
 .Hero
-    height: 100vh
+    min-height: 100vh
     background: url('../../utilities/images/HeroBG.svg')
     background-position: left center
     background-repeat: no-repeat
-    background-size: contain
+    background-size: 595px 100%
     display: grid
     justify-content: center
     align-items: center
-    grid-template-columns: repeat(2, 280px) repeat(5, 1fr)
-    grid-template-areas: ". . container container container container ."
+    grid-template-columns: repeat(3, 190px) repeat(5, 1fr)
+    grid-template-areas: ". . . container container container container ."
     &__name
         font-size: 1.3rem
         font-weight: 700
         color: var(--white)
         position: absolute
         left: 20px
-        top: 16px
+        top: 29.6px
     &__profile
         height: 250px
         width: 250px
@@ -30,21 +30,23 @@ $layout-breakpoint-xl: 1200px
         position: absolute
         top: 50%
         left: 230px
-        transform: translateY(-50%)
+        transform: translate3d(0, -50%, 0)
     &__container
         grid-area: container
         text-align: left
         display: flex
         flex-direction: column
-        gap: 30px
+        > div:not(:last-child)
+            margin-bottom: 30px
     &__title
         font-size: 4rem
         font-weight: 700
         color: var(--c4)
+        &--br
+            display: block
     &__about
         font-size: 1.2rem
         font-weight: 400
-        text-align: left
         color: var(--c4)
     &__button
         padding: 12.8px 14.4px
@@ -73,8 +75,89 @@ $layout-breakpoint-xl: 1200px
             transform: translate(-50%, 1px)
             left: 50%
     &__blink
-        height: 51px
+        height: 4rem
         width: 2.5px
         background: var(--c4)
         transform: translate(-4px, 1px)
         display: inline-block
+
+/*----------------------------------Media Queries----------------------------------*/
+@media only screen and (max-width: $layout-breakpoint-xl)
+    .Hero
+        background-position: -140px center
+        grid-template-columns: repeat(3, 150px) repeat(5, 1fr)
+        &__title
+            font-size: 3.5rem
+        &__blink
+            height: 3.5rem
+        &__about
+            font-size: 1.1rem
+        &__profile
+            left: 90px
+
+@media only screen and (max-width: $layout-breakpoint-lg)
+    .Hero
+        grid-template-columns: repeat(3, 125px) repeat(5, 1fr)
+        &__title
+            font-size: 3rem
+        &__blink
+            height: 3.5rem
+        &__about
+            font-size: 1rem
+        &__profile
+            height: 202px
+            width: 202px
+            left: 120px
+
+@media only screen and (max-width: $layout-breakpoint-md)
+    .Hero
+        background: url('../../utilities/images/HeroBGM.svg')
+        background-repeat: no-repeat
+        background-position: top left
+        background-size: 100% 60%
+        grid-template: repeat(3, 100px) repeat(5, 1fr) / none
+        grid-template-areas: '.' '.' '.' 'container' 'container' 'container' 'container' '.'
+        &__profile
+            height: 202px
+            width: 202px
+            left: 50%
+            top: 80px
+            transform: translate3d(-50%, 0, 0)
+        &__container
+            align-items: center
+            text-align: center
+            > div:not(:last-child)
+                margin-bottom: 20px
+        &__title
+            font-size: 2.5rem
+            &--br
+                display: none
+        &__blink
+            height: 2.5rem
+        &__about
+            width: 70%
+            font-size: 1rem
+            
+@media only screen and (max-width: $layout-breakpoint-xs)
+    .Hero
+        &__container
+            align-items: flex-start
+            text-align: left
+            padding: 0 11%
+        &__title
+            font-size: 1.81rem
+        &__blink
+            height: 2rem
+        &__about
+            width: 100%
+            font-size: 0.8rem
+        &__button
+            padding: 10px 12px
+            font-size: 13px
+        &__scroll
+            height: 56px
+            width: 24px
+            & > div
+                height: 16px
+                width: 16px
+                transform: translate(-50%, 0px)

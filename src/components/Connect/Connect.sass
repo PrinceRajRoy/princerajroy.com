@@ -1,3 +1,5 @@
+$layout-breakpoint-md: 768px
+
 .Connect
     position: absolute
     right: 30px
@@ -11,3 +13,9 @@
             width: 1px
             margin: 15px auto 0px
             background: linear-gradient(to bottom, var(--c2) 1.05%, var(--white) 100%)
+
+/*----------------------------------Media Queries----------------------------------*/
+@media only screen and (max-width: $layout-breakpoint-md)
+    .Connect
+        top: 100px
+        right: 0px

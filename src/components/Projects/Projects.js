@@ -32,7 +32,8 @@ function Projects() {
         const items = document.querySelectorAll('.Project')
         items.forEach((el, index) => {
             gsap.to(el.querySelector('.Project__image'), {
-                y: '-100px',
+                y: window.innerWidth > 768 ? '-100px' : '0px',
+                x: window.innerWidth > 768 ? '0px' : '100px',
                 ease: 'none',
                 scrollTrigger: {
                     trigger: el,
@@ -64,6 +65,7 @@ function Projects() {
                 <Project 
                     title="Netflix Clone" 
                     image={P1} 
+                    right
                     desc="A ReactJS App that uses the popular 'The Movie Database' (TMDb) API's which provides the ongoing popular TV Series and Movies listing and presents to the user in the same visual way as Netflix."
                     link="https://github.com/PrinceRajRoy/Netflix-Clone-App" />
                 <Project 
@@ -74,6 +76,7 @@ function Projects() {
                 <Project 
                     title="Text Chat App" 
                     image={P5} 
+                    right
                     desc="Based on ReactJS + NodeJS + Socket.io, an app for texting, which allows user to join a room with given id and talk with others in the same room."
                     link="https://github.com/PrinceRajRoy/ChatApp" />
             </div>
