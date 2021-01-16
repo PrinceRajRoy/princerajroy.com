@@ -33,7 +33,7 @@ function Projects() {
         items.forEach((el, index) => {
             gsap.to(el.querySelector('.Project__image'), {
                 y: window.innerWidth > 768 ? '-100px' : '0px',
-                x: window.innerWidth > 768 ? '0px' : '100px',
+                x: window.innerWidth > 768 ? '0vw' : window.innerWidth > 600 ? '40vw' : '0vw',
                 ease: 'none',
                 scrollTrigger: {
                     trigger: el,

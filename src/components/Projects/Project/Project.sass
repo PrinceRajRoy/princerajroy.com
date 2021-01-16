@@ -28,17 +28,12 @@ $layout-breakpoint-xxl: 1440px
         text-align: left
         font-size: 1.1rem
         width: 80%
-    &__githubLink
-        &--image
-            background: var(--c2)
-            padding: 10px 15px
-            border-radius: 10px
+    &__link--image
+        background: var(--c2)
+        padding: 10px 15px
+        border-radius: 10px
     &__liveLink
         margin-left: 24px
-        &--image
-            background: var(--c2)
-            padding: 10px 15px
-            border-radius: 10px
     &__image
         width: 430px
         height: 370px
@@ -57,43 +52,79 @@ $layout-breakpoint-xxl: 1440px
                 padding-left: 210px
 
 /*----------------------------------Media Queries----------------------------------*/
-// @media only screen and (max-width: $layout-breakpoint-xxl)
-//     .Project
-//         &__image
-//             margin-left: -140px
-//         &:nth-child(2n)
-//             .Project__image
-//                 margin-right: -140px
-
-@media only screen and (max-width: $layout-breakpoint-xl)
+@media only screen and (max-width: $layout-breakpoint-xxl)
     .Project
         &__container
             width: 73.5%
+
+@media only screen and (max-width: $layout-breakpoint-lg)
+    .Project
+        &__container
+            height: 350px
+            width: 75%
+            padding: 30px
+        &__title
+            font-size: 1.75rem
+        &__desc
+            font-size: 0.9rem
+            width: 65%
+        &__image
+            width: 350px
+            height: 300px
+        &__link--image
+            padding: 8px 12px
+            height: 38px
 
 @media only screen and (max-width: $layout-breakpoint-md)
     .Project
         margin-top: 300px
         position: relative
         justify-content: flex-end
-        &__title
-            font-size: 30px
-        &__desc
-            font-size: 0.9rem
-        &__right
-            .Project
-                &__image
-                    margin-right: 0px
-                &__container
-                    padding: 50px
         &__container
-            height: 350px
-            width: 100%
-            padding: 50px
-        &__image
-            width: 350px
             height: 300px
+            width: 100%
+        &__title
+            font-size: 2rem
+        &__desc
+            width: 100%
+        &__image
+            width: 300px
+            height: 250px
             margin: 0
             position: absolute
             top: -80%
-            left: 20%
-            transform: translate3d(-30%, 0%, 0)
+            left: 0
+            transform: translate3d(0%, 0%, 0)
+        &__right
+            .Project
+                &__container
+                    padding: 30px
+
+@media only screen and (max-width: $layout-breakpoint-sm)
+    .Project
+        &__container
+            height: 250px
+            align-items: center
+        &__desc
+            text-align: center
+        &__image
+            top: -95%
+            left: 50%
+            transform: translate3d(-50%, 0, 0)
+        &__link--image
+            padding: 8px 12px
+            height: 35px
+
+@media only screen and (max-width: $layout-breakpoint-xs)
+    .Project
+        &__title
+            font-size: 1.3rem
+        &__image
+            width: 300px
+            height: 220px
+            top: -85%
+        &__desc
+            font-size: 0.8rem
+        &__link--image
+            padding: 8px 8px
+            height: 32px

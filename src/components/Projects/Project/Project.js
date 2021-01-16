@@ -12,10 +12,10 @@ function Project({ title, image, desc, link, right }) {
                 <div className="Project__desc">{desc}</div>
                 <div className="Project__links">
                     <a className="Project__githubLink" href={link} target="_blank" rel="noopener noreferrer">
-                        <img className="Project__githubLink--image" src={GithubLink} alt="Github Link"/>
+                        <img className="Project__link--image" src={GithubLink} alt="Github Link"/>
                     </a>
                     { link && <a className="Project__liveLink" href={link} target="_blank" rel="noopener noreferrer">
-                        <img className="Project__liveLink--image" src={LiveLink} alt="Live Preview"/>
+                        <img className="Project__link--image" src={LiveLink} alt="Live Preview"/>
                     </a>}
                 </div>
             </div>
