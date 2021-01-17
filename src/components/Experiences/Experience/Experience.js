@@ -5,9 +5,9 @@ function Experience({ where, role, what, duration }) {
     return (
         <div className="Experience">
             <h2 className="Experience__where">{where}</h2>
-            <p className="Experience__role">{role}</p>
-            <p className="Experience__what">{what}</p>
-            <p className="Experience__duration">{duration}</p>
+            <div className="Experience__role">{role}</div>
+            <div className="Experience__what">{what}</div>
+            <div className="Experience__duration">{duration}</div>
         </div>
     )
 }

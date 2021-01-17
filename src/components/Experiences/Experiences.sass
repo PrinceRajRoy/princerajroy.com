@@ -1,6 +1,8 @@
+$layout-breakpoint-xs: 480px
 $layout-breakpoint-sm: 600px
-$layout-breakpoint-md: 800px
-$layout-breakpoint-lg: 1000px
+$layout-breakpoint-md: 768px
+$layout-breakpoint-lg: 1024px
+$layout-breakpoint-xl: 1200px
 
 .Experiences
     padding-top: 80px
@@ -8,22 +10,20 @@ $layout-breakpoint-lg: 1000px
         height: 350px
         width: 90%
         margin: 60px auto 0
-        background: rgba(163, 147, 235, 0.5)
+        background: rgba(163, 147, 235, 0.3)
         border-radius: 30px
         display: flex
         align-items: center
         justify-content: center
 
-@media only screen and (max-width: $layout-breakpoint-md)
+@media only screen and (max-width: $layout-breakpoint-lg)
     .Experiences
         font-size: 0.9rem
-        &__bg
-            width: 95%
-            margin: 40px auto 0
 
-@media only screen and (max-width: $layout-breakpoint-sm)
+@media only screen and (max-width: $layout-breakpoint-md)
     .Experiences
+        padding-top: 20px
         &__bg
             width: 100%
             flex-direction: column
-            margin: 90px auto 0
+            margin: 200px auto 150px
