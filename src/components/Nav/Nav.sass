@@ -9,7 +9,6 @@ $layout-breakpoint-md: 768px
     background: var(--white)
     border-radius: 24px
     box-shadow: 0px 0px 4px 2px rgba(94, 99, 182, 0.25)
-    overflow: hidden
     z-index: 999
     &__items
         list-style: none
@@ -72,3 +71,23 @@ $layout-breakpoint-md: 768px
         top: unset
         right: 16px
         bottom: 16px
+        &__items
+            flex-direction: column
+            right: 10px
+            transform: translate3d(0, -100%, 0)
+        &__item
+            margin-bottom: 40px
+            margin-right: 0px
+            color: var(--white)
+            background: linear-gradient(104.64deg, #A393EB 32.09%, #5E63B6 100%)
+            box-shadow: 0px 0px 4px 2px rgba(94, 99, 182, 0.25)
+            padding: 10px
+            border-radius: 10px
+            font-size: 1.1rem
+            &::before
+                width: 30%
+                bottom: 6px
+                left: 50%
+                background: var(--white)
+            &--active::before
+                transform: translate3d(-50%, 0, 0)

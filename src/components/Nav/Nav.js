@@ -9,19 +9,22 @@ function Nav() {
     const [active, setActive] = useState(false)
 
     const props = useSpring({
-        width: active ? `520px` : '48px',
+        width: window.innerWidth > 768 & active ? `520px` : '48px',
+        overflow: active ? "initial" : "hidden",
         config: active ? config.wobbly : config.stiff
     })
     
     useEffect(() => {
         const t1 = gsap.timeline({ paused: true })
         t1.fromTo(".Nav__item", {
-            x: "20px",
+            x: window.innerWidth > 768 ? "20px" : "0px",
+            y: window.innerWidth > 768 ? "0px" : "20px",
             opacity: 0
         }, {
             x: "0px",
+            y: "0px",
             opacity: 1,
-            stagger: 0.1,
+            stagger: window.innerWidth > 768 ? 0.1 : -0.1,
             ease: Power4.easeOut,
             delay: 0.3
         })
