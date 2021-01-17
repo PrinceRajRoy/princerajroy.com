@@ -5,12 +5,13 @@ $layout-breakpoint-lg: 1024px
 $layout-breakpoint-xl: 1200px
 
 .Hero
-    min-height: 100vh
+    min-height: calc(max(100vh, 600px))
     background: url('../../utilities/images/HeroBG.svg')
     background-position: left center
     background-repeat: no-repeat
     background-size: 595px 100%
     display: grid
+    position: relative
     justify-content: center
     align-items: center
     grid-template-columns: repeat(3, 190px) repeat(5, 1fr)
@@ -111,6 +112,7 @@ $layout-breakpoint-xl: 1200px
 
 @media only screen and (max-width: $layout-breakpoint-md)
     .Hero
+        // min-height: calc(min(100vh, 600px))
         background: url('../../utilities/images/HeroBGM.svg')
         background-repeat: no-repeat
         background-position: top left
