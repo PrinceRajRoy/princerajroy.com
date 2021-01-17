@@ -1,43 +1,19 @@
+$layout-breakpoint-xs: 480px
 $layout-breakpoint-sm: 600px
-$layout-breakpoint-md: 800px
+$layout-breakpoint-md: 768px
+$layout-breakpoint-lg: 1024px
+$layout-breakpoint-xl: 1200px
 
 .Footer
     background: var(--c3)
     color: var(--white)
     height: 80px
+    padding: 0px 20px
     display: flex
-    justify-content: center
+    justify-content: flex-end
     align-items: center
-    flex-direction: column
-    & > div
-        display: flex
-        flex-direction: row
-    &__text
-        position: relative
 
-@media only screen and (min-width: $layout-breakpoint-sm)
-    .Footer
-        height: 80px
-        font-size: 1rem
-        &__text
-            padding: 0 20px
-            position: relative
-        &__section .Footer__text:not(:last-child)::after
-            content: '|'
-            position: absolute
-            right: 0
-
-@media only screen and (max-width: $layout-breakpoint-sm)
-    .Footer
-        height: 80px
-        font-size: 1rem
-        flex-direction: row
-        font-size: 0.8rem
-        &__text
-            padding: 0 10px
-        & > div
-            flex-direction: column
-
-@media only screen and (min-width: $layout-breakpoint-md)
+@media only screen and (max-width: $layout-breakpoint-md)
     .Footer
         font-size: 1.2rem
+        justify-content: center
