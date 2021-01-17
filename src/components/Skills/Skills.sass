@@ -1,15 +1,36 @@
-$layout-breakpoint-xs: 400px
+$layout-breakpoint-xs: 480px
 $layout-breakpoint-sm: 600px
-$layout-breakpoint-md: 800px
-$layout-breakpoint-lg: 1000px
+$layout-breakpoint-md: 768px
+$layout-breakpoint-lg: 1024px
 $layout-breakpoint-xl: 1200px
+$layout-breakpoint-xxl: 1440px
 
 .Skills
     margin: auto
     padding-top: 80px
     width: 80%
-    height: 90vh
     &__container
         margin: 60px auto 0px
         display: flex
         justify-content: space-around
+
+/*----------------------------------Media Queries----------------------------------*/
+@media only screen and (max-width: $layout-breakpoint-xxl)
+    .Skills
+        width: 90%
+
+@media only screen and (max-width: $layout-breakpoint-xl)
+    .Skills
+        width: 95%
+
+@media only screen and (max-width: $layout-breakpoint-lg)
+    .Skills
+        width: 100%
+
+@media only screen and (max-width: $layout-breakpoint-md)
+    .Skills
+        padding-top: 20px
+        &__container
+            height: 1600px
+            flex-direction: column
+            align-items: center
