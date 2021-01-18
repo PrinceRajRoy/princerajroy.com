@@ -4,8 +4,8 @@ import './Projects.sass'
 
 import P1 from '../../utilities/images/P1.png'
 import P2 from '../../utilities/images/P2.png'
-import P3 from '../../utilities/images/P3.PNG'
-import P5 from '../../utilities/images/P5.PNG'
+import P3 from '../../utilities/images/P3.png'
+import P4 from '../../utilities/images/P4.png'
 import { NotifyContext } from '../../utilities/context/NotifyContext'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -75,7 +75,7 @@ function Projects() {
                     link="https://github.com/PrinceRajRoy/Astoogle" />
                 <Project 
                     title="Text Chat App" 
-                    image={P5} 
+                    image={P4} 
                     right
                     desc="Based on ReactJS + NodeJS + Socket.io, an app for texting, which allows user to join a room with given id and talk with others in the same room."
                     link="https://github.com/PrinceRajRoy/ChatApp" />
