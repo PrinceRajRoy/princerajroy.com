@@ -14,7 +14,6 @@ function Skills() {
                 <Skill icon={Skill1} title={"FRONT-END DEVELOPEMENT"} desc="Have been in this field for quite some time, love to tweak css here and there with some magic from javascript to create smooth web apps. Mostly experienced in working with ReactJS, GSAP, etc. Find more on CV."/>
                 <Skill icon={Skill2} title={"BACK-END DEVELOPMENT"} desc="Worked on backend for some projects, a video calling app, library management system, etc. NodeJS (obviously), HapiJS, etc are my area of knowledge. More on github."/>
                 <Skill icon={Skill3} title={"MISCELLANEOUS"} desc="Knowledge of several programmign languages (C, C++, Python), Designing (FIGMA) & animations (BLENDER) checkout my IG for some cool animations!" subtitle="Online Platforms" subdesc="Firebase, Heroku"/>
-                {/* <Skill icon={BLENDER} title={"Meta"} desc="C, C++, Java, Python, Matlab, MySQL" subtitle={"Other Softwares"} subdesc={"Blender, Inkscape, VSDC"}/> */}
             </div>
         </div>
     )
