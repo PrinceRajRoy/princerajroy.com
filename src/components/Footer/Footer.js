@@ -4,7 +4,7 @@ import './Footer.sass'
 function Footer() {
     return (
         <div className="Footer">
-            Made by Prince Raj Roy
+            Made by Me with React
         </div>
     )
 }
