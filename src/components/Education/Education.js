@@ -50,7 +50,7 @@ function Education() {
                     </div>
                     <div className="Education__timeline--stat">
                         <div className="institute">Kendriya Vidyalaya, Tinsukia, Assam</div>
-                        <div className="performance">High School (CBSE Board) <br/>9 CGPA</div>
+                        <div className="performance">High School (CBSE Board)</div>
                         <div className="duration">2004 - 2014</div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ function Education() {
                     </div>
                     <div className="Education__timeline--stat right">
                         <div className="institute">Kendriya Vidyalaya, Tinsukia, Assam</div>
-                        <div className="performance">Higher Secondary (CBSE Board) <br/>92.2% (Science)</div>
+                        <div className="performance">Higher Secondary (CBSE Board)</div>
                         <div className="duration">2014 - 2016</div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function Education() {
                     </div>
                     <div className="Education__timeline--stat">
                         <div className="institute">Tezpur University, Tezpur, Assam</div>
-                        <div className="performance">BTech in Computer Science Engg. <br /> CGPA - 7.84</div>
+                        <div className="performance">BTech in Computer Science Engg.</div>
                         <div className="duration">2016 - 2020</div>
                     </div>
                 </div>
